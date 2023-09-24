@@ -282,7 +282,7 @@ a, button {
 
 .bottom-banner {
   padding: 100px;
-  background-image: url(../../assets/features/desktop/bottom-banner.jpg);
+  background-image: url(../assets/features/desktop/bottom-banner.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
