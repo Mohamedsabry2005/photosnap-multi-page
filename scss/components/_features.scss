@@ -1,0 +1,29 @@
+.features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: normal;
+  gap: 80px 50px;
+  padding: 50px;
+  margin: auto;
+  width: 90%;
+
+  &__feature {
+    display: flex;
+    width: 330px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+  }
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+}
+
+

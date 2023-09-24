@@ -1,0 +1,118 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    p {
+      font-size: 1.8rem;
+      font-weight: 700;
+      &.active {
+        opacity: 0.5;
+      }
+    }
+    .toggle {
+      width: 80px;
+      height: 40px;
+      border-radius: 9999px;
+      background-color: $c-black;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &.open {
+        justify-content: flex-end;
+      }
+      span {
+        width: 30px;
+        height: 30px;
+        background-color: $c-white;
+        border-radius: 9999px;
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+    h3 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+    }
+    >p {
+      text-align: center;
+      opacity: 0.6;
+      height: 100px;
+    }
+  }
+  &__offer {
+    h2 {
+      text-align: center;
+      letter-spacing: 0.417rem;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4.8rem;
+      &.hidden {
+        display: none;
+      }
+    }
+    p {
+      text-align: center;
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+  &__button {
+    border: none;
+    padding: 10px 20px;
+    background-color: $c-black;
+    color: $c-white;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  &__button:hover {
+    color: $c-black ;
+    background-color: $c-grey;
+  }
+
+  &__pro {
+    background-color: $c-black;
+    color: $c-white;
+    order: 0;
+    @include breakpoints(small){
+      order: -1;
+    }
+    button {
+      background-color: $c-white;
+      color: $c-black;
+      &:hover {
+        background-color: $c-grey;
+      }
+    }
+  }
+}

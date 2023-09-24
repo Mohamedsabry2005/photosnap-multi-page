@@ -1,0 +1,78 @@
+.footer {
+  background-color: $c-black;
+
+  &__content {
+    padding: 70px 120px;
+    min-height: 300px;
+    @include breakpoints(small) {
+      padding:40px
+    }
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+    align-items: start;
+    @include breakpoints(small) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+  &__logo-and-contacts {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    height: 100%;
+    justify-content: space-between;
+    @include breakpoints(small) {
+      align-self: self-start;
+    }
+    ul {
+      display: flex;
+      gap: 10px;
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+  &__list {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: -10px;
+      @include breakpoints(small){
+        align-items: center;
+      }
+      .active {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__link-button {
+    margin-left: auto;
+    a {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      color: $c-white;
+      gap: 20px;
+      &:hover > img {
+        transform: translateX(20px);
+      }
+      img {
+        transition: all 0.2s ease;
+      }
+    }
+    @include breakpoints(small){
+      margin-left: 0;
+      align-self: self-start;
+    }
+  }
+}

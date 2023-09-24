@@ -1,0 +1,161 @@
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $c-white;
+  @include breakpoints(very-small) {
+    flex-direction: column-reverse;
+  }
+  &__text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0px 50px;
+    margin: 50px 0px;
+    position: relative;
+    width: 40%;
+    @include breakpoints(very-small) {
+      width: auto;
+    }
+    h1 {
+      color: $c-black;
+      text-transform: uppercase;
+    }
+    p {
+      color: $c-black;
+    }
+    a{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      color: $c-black;
+      gap: 20px;
+      img {
+        transition: all .2s ease;
+      }
+    }
+
+    a:hover > img {
+      transform: translateX(20px);
+    }
+  }
+  &__img {
+    width: 60%;
+    @include breakpoints(very-small) {
+      width: auto;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.banner:first-child{
+  background-color: $c-black;
+  h1 {
+    color: $c-white;
+  }
+  p {
+    color: $c-white;
+  }
+
+  a {
+    color: $c-white;
+  }
+  .banner__text::before {
+    content: "";
+    height: 80%;
+    width: 0.6rem;
+    background-image: linear-gradient(#5a77ff,#bc7198,#ffc593);
+    display: block;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.banner-reverse{
+  flex-direction: row-reverse;
+  @include breakpoints(very-small) {
+    flex-direction: column-reverse;
+  }
+}
+
+// stories banner
+
+.stories-page {
+  .banner {
+    background-color: $c-black;
+    background-image: url(../assets/stories/desktop/moon-of-appalacia.jpg);
+    background-position: center;
+    background-size: cover;
+    @include breakpoints(small){
+      background-image: none;
+    }
+    &__img > img {
+    opacity: 0;
+    @include breakpoints(small) {
+      opacity: 1;
+    }
+  }
+  }
+}
+
+
+// bottom banner
+
+.bottom-banner {
+  padding: 100px;
+  background-image: url(../../assets/features/desktop/bottom-banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @include breakpoints(very-small){
+    padding: 20px;
+  }
+  &::before {
+    content: "";
+    height: 100%;
+    width: 0.6rem;
+    background-image: linear-gradient(#5a77ff, #bc7198, #ffc593);
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  h2 {
+    color: $c-white;
+    text-transform: uppercase;
+    letter-spacing: 0.417rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    @include breakpoints(very-small){
+      font-size: 3rem;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: $c-white;
+    gap: 20px;
+    &:hover > img {
+      transform: translateX(20px);
+    }
+    img {
+      transition: all 0.2s ease;
+    }
+  }
+}
